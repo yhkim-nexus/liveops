@@ -1,0 +1,150 @@
+# 프로젝트 메타데이터 템플릿
+# 새 프로젝트 생성 시 이 파일을 복사하여 사용
+
+# ============================================
+# 기본 정보
+# ============================================
+project:
+  name: "{프로젝트명}"
+  code: "{3-4자 코드}"  # 예: MEM, PAY
+  description: "{프로젝트 설명}"
+  
+  created: "{YYYY-MM-DD}"
+  updated: "{YYYY-MM-DD}"
+  
+  status: "active"  # active | on-hold | completed | archived
+  phase: "research"  # research | planning | documentation | review | completed
+
+# ============================================
+# 팀 정보
+# ============================================
+team:
+  owner: "{담당자}"
+  stakeholders:
+    - "{이해관계자1}"
+    - "{이해관계자2}"
+
+# ============================================
+# 타임라인
+# ============================================
+timeline:
+  kickoff: "{YYYY-MM-DD}"
+  target_completion: "{YYYY-MM-DD}"
+  
+  milestones:
+    - name: "리서치 완료"
+      target: "{YYYY-MM-DD}"
+      status: "pending"  # pending | in_progress | completed
+      
+    - name: "기획 확정"
+      target: "{YYYY-MM-DD}"
+      status: "pending"
+      
+    - name: "문서 초안 완료"
+      target: "{YYYY-MM-DD}"
+      status: "pending"
+      
+    - name: "최종 승인"
+      target: "{YYYY-MM-DD}"
+      status: "pending"
+
+# ============================================
+# 산출물 현황
+# ============================================
+documents:
+  research:
+    - id: ""
+      title: ""
+      version: ""
+      status: ""
+      path: ""
+      
+  meetings:
+    - id: ""
+      title: ""
+      version: ""
+      status: ""
+      path: ""
+      
+  prd:
+    - id: ""
+      title: ""
+      version: ""
+      status: ""
+      path: ""
+      
+  policy:
+    - id: ""
+      title: ""
+      version: ""
+      status: ""
+      path: ""
+      
+  ux:
+    - id: ""
+      title: ""
+      version: ""
+      status: ""
+      path: ""
+      
+  diagrams:
+    - id: ""
+      title: ""
+      version: ""
+      status: ""
+      path: ""
+      
+  reviews:
+    - id: ""
+      title: ""
+      version: ""
+      status: ""
+      path: ""
+
+# ============================================
+# 결정 사항 추적
+# ============================================
+decisions:
+  - id: "D-001"
+    date: "{YYYY-MM-DD}"
+    description: "{결정 내용}"
+    rationale: "{근거}"
+    source: "{회의록 ID}"
+    
+# ============================================
+# 액션 아이템 추적
+# ============================================
+action_items:
+  - id: "A-001"
+    description: "{내용}"
+    assignee: "{담당 에이전트}"
+    due_date: "{YYYY-MM-DD}"
+    status: "pending"  # pending | in_progress | completed | cancelled
+    related_doc: ""
+
+# ============================================
+# 미결 사항
+# ============================================
+open_issues:
+  - id: "Q-001"
+    question: "{미결 질문}"
+    raised_date: "{YYYY-MM-DD}"
+    status: "open"  # open | resolved
+    resolution: ""
+
+# ============================================
+# 워크플로우 이력
+# ============================================
+workflow_history:
+  - date: "{YYYY-MM-DD}"
+    workflow: "research-to-spec"
+    step: "Phase 1: 리서치"
+    status: "completed"
+    notes: ""
+
+# ============================================
+# 태그
+# ============================================
+tags:
+  - "{태그1}"
+  - "{태그2}"

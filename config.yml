@@ -1,0 +1,137 @@
+# Claude Agent System Configuration
+# 전역 설정 파일 - 모든 에이전트가 참조
+
+version: "1.0"
+updated: "2025-02-13"
+
+# ============================================
+# 프로젝트 설정
+# ============================================
+project:
+  name: "Service Planning Agent System"
+  docs_path: "docs"
+  
+# ============================================
+# 파일 네이밍 규칙
+# ============================================
+naming:
+  # 패턴: YYYY-MM-DD_[type]_[project]_[topic]_v[version].md
+  # 예시: 2025-02-13_PRD_membership_user-auth_v1.0.md
+  
+  pattern: "{date}_{type}_{project}_{topic}_v{version}.md"
+  date_format: "YYYY-MM-DD"
+  
+  type_prefixes:
+    research: "RES"
+    meeting: "MTG"
+    prd: "PRD"
+    policy: "POL"
+    ux: "UX"
+    diagram: "DIA"
+    review: "REV"
+    session: "SES"
+
+# ============================================
+# 버전 관리
+# ============================================
+versioning:
+  # major: 구조 변경, 큰 수정
+  # minor: 내용 추가/수정
+  format: "v{major}.{minor}"
+  initial: "v1.0"
+  
+  # 버전 업 기준
+  major_triggers:
+    - "구조 변경"
+    - "섹션 추가/삭제"
+    - "승인 후 재작성"
+  minor_triggers:
+    - "내용 수정"
+    - "오타 수정"
+    - "피드백 반영"
+
+# ============================================
+# 프로젝트 폴더 구조
+# ============================================
+project_structure:
+  folders:
+    - name: "01-research"
+      description: "시장조사, 경쟁사 분석"
+      agents: ["researcher"]
+    - name: "02-planning"
+      description: "기획 세션"
+      agents: ["planner"]
+    - name: "03-prd"
+      description: "제품 요구사항 문서"
+      agents: ["prd"]
+    - name: "04-policy"
+      description: "운영 정책 문서"
+      agents: ["policy"]
+    - name: "05-ux"
+      description: "화면 정의서"
+      agents: ["uiux-spec"]
+    - name: "06-diagrams"
+      description: "다이어그램, 플로우차트"
+      agents: ["diagram"]
+    - name: "07-reviews"
+      description: "검토 리포트"
+      agents: ["reviewer"]
+    - name: "08-meeting-note"
+      description: "회의록"
+      agents: ["meeting-note"]
+
+# ============================================
+# 에이전트 워크플로우 순서
+# ============================================
+workflow:
+  standard:
+    - step: 1
+      agent: "planner"
+      output: "session"
+      next: ["researcher", "meeting-note"]
+    - step: 2
+      agent: "researcher"
+      output: "research-report"
+      next: ["prd"]
+    - step: 3
+      agent: "prd"
+      output: "prd-document"
+      next: ["policy", "uiux-spec", "diagram"]
+    - step: 4
+      agent: "policy"
+      output: "policy-document"
+      next: ["reviewer"]
+    - step: 5
+      agent: "uiux-spec"
+      output: "ux-spec"
+      next: ["reviewer"]
+    - step: 6
+      agent: "diagram"
+      output: "diagrams"
+      next: ["reviewer"]
+    - step: 7
+      agent: "reviewer"
+      output: "review-report"
+      next: []
+
+# ============================================
+# 공통 참조 파일
+# ============================================
+shared_files:
+  style_guide: "shared/style-guide.md"
+  terminology: "shared/terminology.md"
+  conventions: "shared/conventions.md"
+  review_checklist: "shared/review-checklist.md"
+
+# ============================================
+# 템플릿 경로
+# ============================================
+templates:
+  research: "templates/research-template.md"
+  meeting: "templates/meeting-template.md"
+  prd: "templates/prd-template.md"
+  policy: "templates/policy-template.md"
+  ux: "templates/ux-template.md"
+  diagram: "templates/diagram-template.md"
+  review: "templates/review-template.md"
+  project_meta: "templates/project-meta-template.yml"

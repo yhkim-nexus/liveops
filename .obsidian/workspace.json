@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "85d50f85e280a3a4",
+    "type": "split",
+    "children": [
+      {
+        "id": "a75c489d38e50a6b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cedc5302be80fc85",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/01-research/2026-03-09_RES_GLO_competitor-analysis_v1.0.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-03-09_RES_GLO_competitor-analysis_v1.0"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3d6ba6095de3ef15",
+    "type": "split",
+    "children": [
+      {
+        "id": "166a2b79a6b3ace4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "af1155d10660a731",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "e0602eb060e81a15",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "4272029a51eb8542",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 407.5
+  },
+  "right": {
+    "id": "4a4abae20572dd71",
+    "type": "split",
+    "children": [
+      {
+        "id": "b1a7038c0a95857c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "df1e1ce664b830f6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/03-prd/2026-03-24_PRD_GLO_ab-testing_v1.0.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "2026-03-24_PRD_GLO_ab-testing_v1.0 의 백링크"
+            }
+          },
+          {
+            "id": "a759e5a1539c6e61",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/03-prd/2026-03-24_PRD_GLO_ab-testing_v1.0.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "2026-03-24_PRD_GLO_ab-testing_v1.0 의 나가는 링크"
+            }
+          },
+          {
+            "id": "f804cf125011c2a0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "74bfa7d382ed7720",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "모든 속성"
+            }
+          },
+          {
+            "id": "1e542c9310c06373",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/03-prd/2026-03-24_PRD_GLO_ab-testing_v1.0.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "2026-03-24_PRD_GLO_ab-testing_v1.0 의 개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false
+    }
+  },
+  "active": "cedc5302be80fc85",
+  "lastOpenFiles": [
+    "docs/01-research/2026-03-05_RES_GLO_market-analysis_v1.0.md",
+    "docs/01-research/2026-03-10_RES_GLO_satori-segmentation_v1.0.md",
+    "docs/01-research/2026-03-09_RES_GLO_competitor-analysis_v1.0.md",
+    "docs/08-meeting-note/2026-03-09_MTG_GLO_competitor-deep-analysis_v1.0.md",
+    "docs/08-meeting-note/2026-03-05_MTG_GLO_research-kickoff_v1.0.md",
+    "docs/02-planning/2026-03-05_SES_GLO_kickoff_v1.0.md",
+    "docs/06-diagrams/2026-03-26_DIA_GLO_rbac_v1.0.md",
+    "docs/02-planning/2026-03-30_SES_GLO_remote-config-planning_v1.0.md",
+    "docs/05-ux/2026-03-26_UX_GLO_rbac_v1.0.md",
+    "docs/03-prd/2026-03-26_PRD_GLO_rbac_v1.0.md",
+    "docs/05-ux/2026-03-27_UX_GLO_push-notification_v1.0.md",
+    "docs/03-prd/2026-03-27_PRD_GLO_push-notification_v1.0.md",
+    "docs/05-ux/2026-03-30_UX_GLO_remote-config_v1.0.md",
+    "docs/03-prd/2026-03-30_PRD_GLO_remote-config_v1.0.md",
+    "docs/05-ux/2026-03-24_UX_GLO_ab-testing_v1.0.md",
+    "docs/03-prd/2026-03-24_PRD_GLO_ab-testing_v1.0.md",
+    "docs/05-ux/2026-03-27_UX_GLO_player-management_v1.0.md",
+    "docs/03-prd/2026-03-27_PRD_GLO_player-management_v1.0.md",
+    "docs/05-ux/2026-03-23_UX_GLO_live-events_v1.0.md",
+    "docs/03-prd/2026-03-23_PRD_GLO_live-events_v1.0.md",
+    "docs/06-diagrams/2026-03-10_DIA_GLO_player-segmentation_v1.0.md",
+    "docs/05-ux/2026-03-10_UX_GLO_player-segmentation_v1.0.md",
+    "apps/admin/src/app/segments/[id]/edit/page.tsx",
+    "apps/admin/src/app/segments/[id]/edit",
+    "docs/08-meeting-note/2026-03-30_MTG_GLO_remote-config-session_v1.0.md",
+    "apps/admin/src/app/remote-config/approvals/page.tsx",
+    "apps/admin/src/app/remote-config/approvals",
+    "apps/admin/src/features/remote-config/components/RemoteConfigStatusBadge.tsx",
+    "apps/admin/src/app/api/remote-config/[id]/transition/route.ts",
+    "apps/admin/src/app/api/remote-config/[id]/transition",
+    "apps/admin/src/app/remote-config/layout.tsx",
+    "docs/07-reviews/2026-03-30_REV_GLO_remote-config-review_v1.0.md",
+    "docs/06-diagrams/2026-03-30_DIA_GLO_remote-config_v1.0.md",
+    "apps/admin/src/app/remote-config/[id]/edit/page.tsx",
+    "apps/admin/src/app/remote-config/[id]/page.tsx",
+    "docs/superpowers/specs/2026-03-30-remote-config-design.md",
+    "RampConsole-screen/screens/08_studio>settings.png",
+    "RampConsole-screen/screens/07_studio>project>지원서비스목록>램프>상세.png",
+    "RampConsole-screen/screens/06_studio>project>지원서비스목록.png",
+    "RampConsole-screen/screens/05_studio>project.png",
+    "RampConsole-screen/screens/04_studio>contract>상세.png",
+    "RampConsole-screen/screens/03_studio>contract.png",
+    "RampConsole-screen/screens/02_studio>dashboard.png",
+    "RampConsole-screen/screens/01_root.png",
+    "apps/admin/public/window.svg",
+    "apps/admin/public/vercel.svg"
+  ]
+}

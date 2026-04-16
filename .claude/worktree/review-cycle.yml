@@ -1,0 +1,264 @@
+# 워크플로우: Review Cycle
+
+문서 검토 및 피드백 반영 사이클입니다.
+
+## 개요
+
+```yaml
+name: "review-cycle"
+description: "문서 검토, 피드백, 수정, 재검토 사이클"
+estimated_time: "1-2일"
+agents:
+  - reviewer (lead)
+  - prd
+  - uiux-spec
+  - diagram
+  - policy
+```
+
+## 워크플로우 다이어그램
+
+```mermaid
+flowchart TD
+    A[검토 요청] --> B[reviewer: 문서 수집]
+    B --> C[reviewer: 개별 검토]
+    C --> D[reviewer: 교차 검토]
+    D --> E{평가 결과}
+    
+    E -->|Pass| F[승인 완료]
+    E -->|Conditional| G[피드백 전달]
+    E -->|Fail| G
+    
+    G --> H[담당 에이전트: 수정]
+    H --> I[버전 업데이트]
+    I --> C
+    
+    F --> J[상태 업데이트: approved]
+```
+
+## 단계별 상세
+
+### Step 1: 검토 요청
+
+```yaml
+trigger: |
+  - "문서 검토해줘"
+  - "PRD 리뷰 요청"
+  - "{프로젝트} 검토 시작"
+  
+agent: reviewer
+input:
+  - 프로젝트명 또는 문서 경로
+action: |
+  1. 프로젝트 폴더 확인
+  2. 검토 대상 문서 목록화
+  3. 검토 순서 결정
+```
+
+### Step 2: 문서 수집
+
+```yaml
+agent: reviewer
+action: |
+  docs/ 에서 다음 문서 수집:
+
+  - 03-prd/*.md (status: review)
+  - 04-policy/*.md (status: review)
+  - 05-ux/*.md (status: review)
+  - 06-diagrams/*.md (status: review)
+  
+  각 문서의 front matter 확인:
+  - version
+  - related_docs
+  - last reviewer comments
+```
+
+### Step 3: 개별 문서 검토
+
+```yaml
+agent: reviewer
+input:
+  - 대상 문서
+  - shared/review-checklist.md
+  
+process:
+  for_each_document:
+    - 체크리스트 항목별 검토
+    - 이슈 발견 시 기록
+    - 심각도 분류 (Critical/Major/Minor)
+    
+output_per_document:
+  issues:
+    - id: "ISS-001"
+      severity: "major"
+      location: "Section 3.2"
+      description: "Acceptance Criteria 누락"
+      suggestion: "Given-When-Then 형식으로 추가"
+```
+
+### Step 4: 교차 문서 검토
+
+```yaml
+agent: reviewer
+action: |
+  ## 정합성 검토
+  
+  ### 1. 기능 추적
+  PRD의 각 기능(F-xxx)이 다음에 매핑되는지 확인:
+  - [ ] 화면정의서의 화면(SCR-xxx)
+  - [ ] 다이어그램의 플로우
+  - [ ] 정책 문서의 관련 조항
+  
+  ### 2. 용어 일관성
+  모든 문서에서 동일 용어 사용 확인
+  (shared/terminology.md 기준)
+  
+  ### 3. ID 참조 검증
+  - 존재하지 않는 ID 참조 없는지
+  - 순환 참조 없는지
+```
+
+### Step 5: 검토 리포트 작성
+
+```yaml
+agent: reviewer
+output:
+  path: docs/07-reviews/
+  filename: "{date}_REV_{project}_review-report_v{n}.md"
+  
+content: |
+  ---
+  id: "REV-{project}-{n}"
+  title: "검토 리포트: {project}"
+  version: "v1.0"
+  status: "completed"
+  created: "{date}"
+  author: "reviewer"
+  reviewed_docs:
+    - "PRD-{project}-001"
+    - "UX-{project}-001"
+  ---
+  
+  # 검토 리포트
+  
+  ## 1. 검토 요약
+  
+  | 문서 | 버전 | 결과 | Critical | Major | Minor |
+  |------|------|------|----------|-------|-------|
+  | PRD | v1.0 | ⚠️ | 0 | 2 | 3 |
+  | UX | v1.0 | ✅ | 0 | 0 | 1 |
+  
+  **전체 판정**: Conditional
+  
+  ## 2. 상세 피드백
+  
+  ### PRD-{project}-001
+  
+  #### 🟡 Major Issues
+  
+  | ID | 위치 | 이슈 | 제안 |
+  |----|------|------|------|
+  | ISS-001 | 3.2 | ... | ... |
+  
+  ## 3. 조치 사항
+  
+  | 담당 | 문서 | 조치 | 기한 |
+  |------|------|------|------|
+  | prd | PRD-001 | ISS-001 수정 | 1일 |
+```
+
+### Step 6: 피드백 전달
+
+```yaml
+condition: result != "Pass"
+
+agent: reviewer
+action: |
+  담당 에이전트에게 피드백 전달:
+  
+  ## prd 에이전트에게
+  
+  다음 이슈를 수정해주세요:
+  
+  ### ISS-001 (Major)
+  - 위치: Section 3.2, F-003
+  - 문제: Acceptance Criteria 누락
+  - 조치: Given-When-Then 형식으로 AC 추가
+  
+  수정 후 버전을 v1.1로 업데이트하고,
+  front matter의 status를 "review"로 유지해주세요.
+  
+handoff_to: [prd, uiux-spec, diagram, policy]
+handoff_data:
+  - 해당 에이전트의 이슈 목록
+  - 수정 가이드
+```
+
+### Step 7: 수정 및 재검토
+
+```yaml
+agents: [prd, uiux-spec, diagram, policy]
+action: |
+  1. 피드백 항목 확인
+  2. 문서 수정
+  3. 버전 업데이트 (v1.0 → v1.1)
+  4. 변경 이력 추가
+  5. 재검토 요청
+
+document_update:
+  front_matter:
+    version: "v1.1"
+    updated: "{today}"
+    
+  changelog: |
+    ## 변경 이력
+    | 버전 | 일자 | 변경 내용 | 작성자 |
+    |------|------|----------|--------|
+    | v1.1 | {date} | REV-001 피드백 반영 (ISS-001) | {agent} |
+    | v1.0 | {date} | 초안 작성 | {agent} |
+```
+
+### Step 8: 승인 처리
+
+```yaml
+condition: result == "Pass"
+
+agent: reviewer
+action: |
+  1. 모든 문서 status → "approved"
+  2. 최종 검토 리포트 작성
+  3. 프로젝트 meta.yml 업데이트
+
+document_update:
+  all_reviewed_docs:
+    front_matter:
+      status: "approved"
+      approved_date: "{date}"
+      approved_by: "reviewer"
+```
+
+## 검토 기준 요약
+
+### Pass 조건
+- Critical: 0개
+- Major: 0개
+- Minor: 5개 이하
+
+### Conditional 조건
+- Critical: 0개
+- Major: 3개 이하
+- Minor: 무관
+
+### Fail 조건
+- Critical: 1개 이상
+- 또는 Major: 4개 이상
+
+## 사용 방법
+
+```
+"{프로젝트} 문서 검토해줘"
+
+"PRD-MEM-001 리뷰 요청"
+
+"review-cycle 시작: membership 프로젝트"
+```

@@ -1,0 +1,983 @@
+# 프로젝트 메타데이터
+# Game LiveOps Service
+
+# ============================================
+# 기본 정보
+# ============================================
+project:
+  name: "Game LiveOps Service"
+  code: "GLO"
+  description: "게임 라이브옵스(LiveOps) 서비스 기획 프로젝트"
+
+  created: "2026-03-05"
+  updated: "2026-03-27"
+
+  status: "active"  # active | on-hold | completed | archived
+  phase: "implementation"  # research | planning | documentation | review | implementation | completed
+
+# ============================================
+# 팀 정보
+# ============================================
+team:
+  owner: "planner"
+  stakeholders: []
+
+# ============================================
+# 타임라인
+# ============================================
+timeline:
+  kickoff: "2026-03-05"
+  target_completion: ""
+
+  milestones:
+    - name: "리서치 완료"
+      target: ""
+      status: "completed"  # pending | in_progress | completed
+
+    - name: "기획 확정"
+      target: ""
+      status: "completed"
+
+    - name: "문서 초안 완료"
+      target: ""
+      status: "completed"
+
+    - name: "구현 시작"
+      target: ""
+      status: "in_progress"
+
+    - name: "최종 승인"
+      target: ""
+      status: "pending"
+
+# ============================================
+# 산출물 현황
+# ============================================
+documents:
+  research:
+    - id: "RES-GLO-001"
+      title: "Game LiveOps 서비스 시장 분석"
+      path: "01-research/2026-03-05_RES_GLO_market-analysis_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "RES-GLO-002"
+      title: "LiveOps 경쟁사 심층 기능 분석"
+      path: "01-research/2026-03-09_RES_GLO_competitor-analysis_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "RES-GLO-003"
+      title: "Heroic Labs Satori 플레이어 세그멘테이션 분석"
+      path: "01-research/2026-03-10_RES_GLO_satori-segmentation_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+  meetings:
+    - id: "MTG-GLO-001"
+      title: "Game LiveOps 프로젝트 킥오프 및 시장조사"
+      path: "08-meeting-note/2026-03-05_MTG_GLO_research-kickoff_v1.0.md"
+      version: "v1.0"
+      status: "completed"
+
+    - id: "MTG-GLO-002"
+      title: "LiveOps 경쟁사 심층 기능 분석"
+      path: "08-meeting-note/2026-03-09_MTG_GLO_competitor-deep-analysis_v1.0.md"
+      version: "v1.0"
+      status: "completed"
+
+    - id: "MTG-GLO-003"
+      title: "플레이어 세그멘테이션 기획 킥오프"
+      path: "08-meeting-note/2026-03-10_MTG_GLO_player-segmentation-kickoff_v1.0.md"
+      version: "v1.0"
+      status: "completed"
+
+    - id: "MTG-GLO-004"
+      title: "라이브 이벤트 기획 및 문서화 완료"
+      path: "08-meeting-note/2026-03-23_MTG_GLO_live-events_v1.0.md"
+      version: "v1.0"
+      status: "completed"
+
+    - id: "MTG-GLO-005"
+      title: "A/B 테스트(실험) 기능 기획 세션"
+      path: "08-meeting-note/2026-03-24_MTG_GLO_ab-testing_v1.0.md"
+      version: "v1.0"
+      status: "completed"
+
+    - id: "MTG-GLO-006"
+      title: "일일 작업 세션: KPI 대시보드, RBAC, MVP 전체 셸 구축 및 구현"
+      path: "08-meeting-note/2026-03-26_MTG_GLO_daily-work-session_v1.0.md"
+      version: "v1.0"
+      status: "completed"
+
+  sessions:
+    - id: "SES-GLO-008"
+      title: "기획 세션: 모바일 푸시 알림 발송"
+      path: "02-planning/2026-03-27_SES_GLO_push-notification-planning_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "SES-GLO-009"
+      title: "기획 세션: Key-Value 원격 설정 (Remote Config)"
+      path: "02-planning/2026-03-30_SES_GLO_remote-config-planning_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+  prd:
+    - id: "PRD-GLO-001"
+      title: "플레이어 세그멘테이션 PRD"
+      path: "03-prd/2026-03-10_PRD_GLO_player-segmentation_v1.1.md"
+      version: "v1.1"
+      status: "draft"
+
+    - id: "PRD-GLO-002"
+      title: "라이브 이벤트 생성 및 스케줄링 PRD"
+      path: "03-prd/2026-03-23_PRD_GLO_live-events_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "PRD-GLO-003"
+      title: "A/B 테스트(실험) PRD"
+      path: "03-prd/2026-03-24_PRD_GLO_ab-testing_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "PRD-GLO-004"
+      title: "KPI 대시보드 PRD"
+      path: "03-prd/2026-03-26_PRD_GLO_kpi-dashboard_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "PRD-GLO-005"
+      title: "역할 기반 접근 제어(RBAC) PRD"
+      path: "03-prd/2026-03-26_PRD_GLO_rbac_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "PRD-GLO-007"
+      title: "PRD: 모바일 푸시 알림 발송"
+      path: "03-prd/2026-03-27_PRD_GLO_push-notification_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "PRD-GLO-008"
+      title: "PRD: Key-Value 원격 설정 (Remote Config)"
+      path: "03-prd/2026-03-30_PRD_GLO_remote-config_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+  policy: []
+
+  ux:
+    - id: "UX-GLO-001"
+      title: "플레이어 세그멘테이션 화면 정의서"
+      path: "05-ux/2026-03-10_UX_GLO_player-segmentation_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "UX-GLO-002"
+      title: "라이브 이벤트 생성 및 스케줄링 화면 정의서"
+      path: "05-ux/2026-03-23_UX_GLO_live-events_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "UX-GLO-003"
+      title: "A/B 테스트(실험) 화면 정의서"
+      path: "05-ux/2026-03-24_UX_GLO_ab-testing_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "UX-GLO-004"
+      title: "KPI 대시보드 화면 정의서"
+      path: "05-ux/2026-03-26_UX_GLO_kpi-dashboard_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "UX-GLO-005"
+      title: "역할 기반 접근 제어(RBAC) 화면 정의서"
+      path: "05-ux/2026-03-26_UX_GLO_rbac_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "UX-GLO-007"
+      title: "화면 정의서: 모바일 푸시 알림 발송"
+      path: "05-ux/2026-03-27_UX_GLO_push-notification_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "UX-GLO-008"
+      title: "화면 정의서: Key-Value 원격 설정 (Remote Config)"
+      path: "05-ux/2026-03-30_UX_GLO_remote-config_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+  diagrams:
+    - id: "DIA-GLO-001"
+      title: "플레이어 세그멘테이션 다이어그램"
+      path: "06-diagrams/2026-03-10_DIA_GLO_player-segmentation_v1.1.md"
+      version: "v1.1"
+      status: "draft"
+
+    - id: "DIA-GLO-002"
+      title: "라이브 이벤트 생성 및 스케줄링 다이어그램"
+      path: "06-diagrams/2026-03-23_DIA_GLO_live-events_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "DIA-GLO-003"
+      title: "A/B 테스트(실험) 다이어그램"
+      path: "06-diagrams/2026-03-24_DIA_GLO_ab-testing_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "DIA-GLO-004"
+      title: "KPI 대시보드 다이어그램"
+      path: "06-diagrams/2026-03-26_DIA_GLO_kpi-dashboard_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "DIA-GLO-005"
+      title: "역할 기반 접근 제어(RBAC) 다이어그램"
+      path: "06-diagrams/2026-03-26_DIA_GLO_rbac_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "DIA-GLO-007"
+      title: "다이어그램: 모바일 푸시 알림 발송"
+      path: "06-diagrams/2026-03-27_DIA_GLO_push-notification_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "DIA-GLO-008"
+      title: "다이어그램: Key-Value 원격 설정 (Remote Config)"
+      path: "06-diagrams/2026-03-30_DIA_GLO_remote-config_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+  reviews:
+    - id: "REV-GLO-001"
+      title: "라이브 이벤트 기획 산출물 리뷰 리포트"
+      path: "07-reviews/2026-03-23_REV_GLO_live-events-review_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "REV-GLO-002"
+      title: "A/B 테스트(실험) 기획 산출물 리뷰 리포트"
+      path: "07-reviews/2026-03-24_REV_GLO_ab-testing-review_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "REV-GLO-003"
+      title: "라이브 이벤트/A/B/세그멘테이션 통합 리뷰 리포트"
+      path: "07-reviews/2026-03-26_REV_GLO_integrated-review_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "REV-GLO-005"
+      title: "검토 리포트: 모바일 푸시 알림 발송"
+      path: "07-reviews/2026-03-27_REV_GLO_push-notification-review_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+    - id: "REV-GLO-006"
+      title: "검토 리포트: Key-Value 원격 설정 (Remote Config)"
+      path: "07-reviews/2026-03-30_REV_GLO_remote-config-review_v1.0.md"
+      version: "v1.0"
+      status: "draft"
+
+# ============================================
+# 결정 사항 추적
+# ============================================
+decisions:
+  - id: "D-001"
+    date: "2026-03-05"
+    description: "Game LiveOps 서비스 기획 프로젝트 킥오프. 시장조사부터 시작한다."
+    rationale: "시장 현황 및 경쟁 서비스 파악이 기획의 기초가 됨"
+    source: "MTG-GLO-001"
+
+  - id: "D-002"
+    date: "2026-03-05"
+    description: "프로젝트 코드를 GLO로 확정"
+    rationale: "Game LiveOps의 약어"
+    source: "MTG-GLO-001"
+
+  - id: "D-003"
+    date: "2026-03-05"
+    description: "시장조사에 서비스명, URL, 장단점, 제공기능을 필수 포함"
+    rationale: "사용자 요구사항"
+    source: "MTG-GLO-001"
+
+  - id: "D-004"
+    date: "2026-03-09"
+    description: "7개 플랫폼(Satori, Unity, AccelByte, Hive, Balancy, GameAnalytics, Metaplay) 심층 분석 완료"
+    rationale: "공식 문서 기반 13개 출처 직접 분석"
+    source: "MTG-GLO-002"
+
+  - id: "D-005"
+    date: "2026-03-09"
+    description: "LiveOps 핵심 기능을 8개 카테고리로 분류"
+    rationale: "7개 플랫폼 교차 비교 결과: 세그멘테이션, 이벤트, A/B, 원격설정, 푸시, 분석, 경제, 운영"
+    source: "MTG-GLO-002"
+
+  - id: "D-006"
+    date: "2026-03-09"
+    description: "필수/권장/선택 3단계 우선순위 분류 확정"
+    rationale: "플랫폼 공통 지원 비율 및 서비스 운영 필수도 기반 (필수 8개, 권장 10개, 선택 10개)"
+    source: "MTG-GLO-002"
+
+  - id: "D-007"
+    date: "2026-03-10"
+    description: "플레이어 세그멘테이션을 GLO 서비스의 핵심 기능(P0)으로 확정"
+    rationale: "경쟁사 7개 플랫폼 모두 필수 기능(7/7), 모든 LiveOps 기능의 기반 축"
+    source: "MTG-GLO-003"
+
+  - id: "D-008"
+    date: "2026-03-10"
+    description: "Identity-Properties-Audience 3계층 속성 구조를 설계 기준으로 채택"
+    rationale: "Default(자동수집) / Computed(이벤트 기반 자동계산) / Custom(사용자정의) 체계로 확장성과 자동화를 동시에 확보"
+    source: "MTG-GLO-003"
+
+  - id: "D-009"
+    date: "2026-03-10"
+    description: "Audience를 모든 LiveOps 기능(Live Events, Experiments, Feature Flags, Messages)의 유일한 공통 타겟팅 단위로 설계"
+    rationale: "단일 오디언스 정의의 재사용으로 로직 중복 제거, 운영 일관성 확보"
+    source: "MTG-GLO-003"
+
+  - id: "D-010"
+    date: "2026-03-10"
+    description: "필터 표현식 DSL을 기본으로 채택하되, 비기술 운영자용 폼 빌더 UI를 주요 인터페이스로 제공"
+    rationale: "폼 빌더로 코드 없이 세그먼트 생성, 쿼리 모드는 고급 조건용 옵션으로 제공 (Satori 2.0+ 패턴)"
+    source: "MTG-GLO-003"
+
+  - id: "D-011"
+    date: "2026-03-23"
+    description: "라이브 이벤트 관리를 GLO 서비스 제2 우선순위 기능(P1)으로 확정"
+    rationale: "RES-GLO-002에서 6/7 경쟁 플랫폼 필수 기능 확인, Phase 1 세그멘테이션과의 직접 의존성"
+    source: "MTG-GLO-004"
+
+  - id: "D-012"
+    date: "2026-03-23"
+    description: "이벤트 상태 머신을 7단계(draft→pending_approval→approved→scheduled→active→paused/ended→archived)로 정의"
+    rationale: "이벤트 전 생명 주기 명확화, 상태별 관리자/시스템 액션 구분"
+    source: "MTG-GLO-004"
+
+  - id: "D-013"
+    date: "2026-03-23"
+    description: "Sticky Membership 메커니즘 도입 (이벤트 active 진입 시 오디언스 스냅샷 생성, 30일 후 자동 삭제)"
+    rationale: "세그멘테이션 로직 중복 제거 + 이벤트 무결성 보장, Satori 검증된 패턴"
+    source: "MTG-GLO-004"
+
+  - id: "D-014"
+    date: "2026-03-23"
+    description: "2단계 승인 워크플로우(기획자 요청 → 승인자 검토/승인/반려) 구현"
+    rationale: "이벤트 오배포 방지, 운영 안전성 확보"
+    source: "MTG-GLO-004"
+
+  - id: "D-015"
+    date: "2026-03-23"
+    description: "단순 스케줄(one-time) + 반복 스케줄(RFC 5545 rrule) 모두 MVP 포함, 타임존 관리자 친화적 UI 제공"
+    rationale: "운영자 편의성, 경쟁사 표준 기능"
+    source: "MTG-GLO-004"
+
+  - id: "D-016"
+    date: "2026-03-23"
+    description: "3가지 긴급 제어 기능(Pause/Kill/Extend) MVP 포함"
+    rationale: "진행 중 이벤트 운영 이슈 즉시 대응 필수"
+    source: "MTG-GLO-004"
+
+  - id: "D-017"
+    date: "2026-03-23"
+    description: "성과 대시보드는 Phase 2 UX 스펙 작성 시 상세 설계, MVP는 이벤트 진행 중 참여율만 실시간 제공"
+    rationale: "개발 리소스 조정, Phase 1 우선 집중"
+    source: "MTG-GLO-004"
+
+  - id: "D-018"
+    date: "2026-03-23"
+    description: "PRD-GLO-002, UX-GLO-002, DIA-GLO-002 3개 문서 교차 검증 완료 및 일관성 확보"
+    rationale: "기능 ID 매핑, 화면-기능 정렬, 데이터 모델 검증"
+    source: "MTG-GLO-004"
+
+  - id: "D-019"
+    date: "2026-03-24"
+    description: "A/B 테스트를 원격 설정 확장형으로 설계 (Satori/Unity 모델 참고)"
+    rationale: "원격 설정과 자연스럽게 통합, 변형 관리가 Key-Value 기반으로 직관적"
+    source: "MTG-GLO-005"
+
+  - id: "D-020"
+    date: "2026-03-24"
+    description: "비기술 LiveOps 운영팀 대상 5단계 위저드 UI 설계"
+    rationale: "주요 사용자가 비기술 운영팀, 직관적 UX 필수"
+    source: "MTG-GLO-005"
+
+  - id: "D-021"
+    date: "2026-03-24"
+    description: "복합 실험 대상 지원 (원격 설정 + 이벤트 + Feature Flag + 조합)"
+    rationale: "경쟁사 대비 차별화, 다양한 실험 시나리오 대응"
+    source: "MTG-GLO-005"
+
+  - id: "D-022"
+    date: "2026-03-24"
+    description: "중급 통계 수준 채택 (Chi-squared, Welch's t-test, Bonferroni 보정, 승자 자동 판별)"
+    rationale: "운영팀 이해 가능한 수준 + 통계적 신뢰성 확보"
+    source: "MTG-GLO-005"
+
+  - id: "D-023"
+    date: "2026-03-24"
+    description: "기존 오디언스(PRD-GLO-001 F-006) 직접 활용, 사전 테스트 + 승인 워크플로우 필수"
+    rationale: "기존 시스템 재사용으로 개발 비용 절감, 운영 안전성 확보"
+    source: "MTG-GLO-005"
+
+  - id: "D-026"
+    date: "2026-03-26"
+    description: "RBAC 4역할 모델로 확장 (Admin/Operator/Editor/Viewer)"
+    rationale: "기획 권한과 승인 권한의 분리 필요, 게임사 조직 구조 고려"
+    source: "MTG-GLO-006"
+
+  - id: "D-027"
+    date: "2026-03-26"
+    description: "KPI 대시보드 7개 지표로 통일 (NRU/DAU/MCU/PU/PUR/Revenue/ARPPU)"
+    rationale: "게임 운영 필수 지표 확대, 구매 전환 추적 강화"
+    source: "MTG-GLO-006"
+
+  - id: "D-028"
+    date: "2026-03-26"
+    description: "라이브 이벤트 event_type 자유 문자열 레이블로 변경"
+    rationale: "고정 enum보다 유연성 높음, 게임사별 이벤트 분류 자유"
+    source: "MTG-GLO-006"
+
+  - id: "D-029"
+    date: "2026-03-26"
+    description: "라이브 이벤트 Priority 4단계 추가 (Low/Medium/High/Critical)"
+    rationale: "이벤트 우선순위 관리 필수, 운영 계획 수립 시 필요"
+    source: "MTG-GLO-006"
+
+  - id: "D-030"
+    date: "2026-03-26"
+    description: "라이브 이벤트 상태 머신 7단계 (cancelled 제거, ended로 통일)"
+    rationale: "상태 단순화, 이벤트 종료 상태 명확화"
+    source: "MTG-GLO-006"
+
+  - id: "D-031"
+    date: "2026-03-26"
+    description: "세그멘테이션 3계층 속성 시스템 확정 (Default/Computed/Custom)"
+    rationale: "자동화와 유연성 동시 확보, Satori 검증 패턴"
+    source: "MTG-GLO-006"
+
+  - id: "D-032"
+    date: "2026-03-26"
+    description: "UI/UX 통일: 메뉴 순서, 여백, 로그아웃 UI 개선"
+    rationale: "사용자 경험 향상, 일관된 디자인"
+    source: "MTG-GLO-006"
+
+  - id: "D-036"
+    date: "2026-03-27"
+    description: "FCM/APNs 인증 키 관리는 설정(Settings) 페이지에서 관리 (푸시 캠페인 화면과 분리)"
+    rationale: "보안 민감 설정 분리, 관리자 전용 접근"
+    source: "SES-GLO-008"
+
+  - id: "D-037"
+    date: "2026-03-27"
+    description: "푸시 수신 동의(opt-in) 데이터는 SDK에서 수집하여 서버 저장, 관리 콘솔에서는 조회만"
+    rationale: "클라이언트 사이드 권한 관리, 서버는 상태 반영만"
+    source: "SES-GLO-008"
+
+  - id: "D-038"
+    date: "2026-03-27"
+    description: "MVP에서 리치 푸시는 이미지만 지원, 커스텀 액션 버튼은 Phase 2"
+    rationale: "MVP 범위 최소화, 핵심 기능 우선"
+    source: "SES-GLO-008"
+
+  - id: "D-039"
+    date: "2026-03-27"
+    description: "발송 빈도 기본값: 플레이어당 일일 3회, 관리자 설정 1~10회 범위"
+    rationale: "수신거부율 관리, 업계 표준 참고"
+    source: "SES-GLO-008"
+
+  - id: "D-040"
+    date: "2026-03-27"
+    description: "(D-041로 대체됨)"
+    rationale: "—"
+    source: "SES-GLO-008"
+
+  - id: "D-041"
+    date: "2026-03-27"
+    description: "MVP에서 야간 방해 금지 처리를 서버가 아닌 디바이스 OS(iOS Focus / Android DND)에 위임. v1.1에서 서버 사이드 방해 금지 선택 추가"
+    rationale: "글로벌 서비스에서 국가별 야간 규제 상이, 서버 관리 복잡도 높음. 경쟁사도 MVP에서 OS 위임 방식 사용"
+    source: "SES-GLO-008"
+
+# ============================================
+# 액션 아이템 추적
+# ============================================
+action_items:
+  - id: "A-001"
+    description: "게임 라이브옵스 시장조사 수행 (서비스 현황, 기능 비교, 장단점 분석)"
+    assignee: "researcher"
+    due_date: ""
+    status: "completed"  # pending | in_progress | completed | cancelled
+    related_doc: "RES-GLO-001"
+
+  - id: "A-002"
+    description: "시장조사 결과 기반 기획 세션 진행 (서비스 컨셉, 핵심 기능, 타겟 사용자 확정)"
+    assignee: "planner"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-001"
+
+  - id: "A-003"
+    description: "경쟁사 심층 분석 리포트 작성 (상위 5개 서비스 상세)"
+    assignee: "researcher"
+    due_date: ""
+    status: "completed"
+    related_doc: "RES-GLO-002"
+
+  - id: "A-004"
+    description: "타겟 사용자 리서치 (게임사 규모/장르별 니즈)"
+    assignee: "researcher"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-001"
+
+  - id: "A-005"
+    description: "MVP(Phase 1) 기능 범위 확정 및 PRD 작성 시작"
+    assignee: "prd"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-002"
+
+  - id: "A-006"
+    description: "Phase별 로드맵 기반 기획 세션 진행 (MVP 범위 논의)"
+    assignee: "planner"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-002"
+
+  - id: "A-007"
+    description: "타겟 사용자 세그먼트 확정 (인디/중소/대형 중 1차 타겟)"
+    assignee: "planner"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-002"
+
+  - id: "A-008"
+    description: "플레이어 세그멘테이션 PRD 작성 (세그멘테이션 기능 명세, 속성 체계, 필터 언어 스펙)"
+    assignee: "prd"
+    due_date: ""
+    status: "completed"
+    related_doc: "PRD-GLO-001"
+
+  - id: "A-009"
+    description: "세그멘테이션 관리 화면 정의서 작성 (폼 빌더 UI, Audience 관리, 속성 관리 화면 설계)"
+    assignee: "uiux-spec"
+    due_date: ""
+    status: "completed"
+    related_doc: "UX-GLO-001"
+
+  - id: "A-010"
+    description: "세그멘테이션 데이터 흐름 다이어그램 작성 (Identity 프로필 갱신 → Properties 계산 → Audience 재계산 → LiveOps 타겟팅 플로우)"
+    assignee: "diagram"
+    due_date: ""
+    status: "completed"
+    related_doc: "DIA-GLO-001"
+
+  - id: "A-011"
+    description: "이벤트 택소노미 정의 (측정할 핵심 행동 이벤트 목록 정의, Computed Properties 자동 계산 규칙 수립)"
+    assignee: "planner"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-004"
+
+  - id: "A-012"
+    description: "MVP(Phase 1)에 포함될 초기 세그먼트 목록 확정 (신규/활성/휴면/이탈/결제자 등 기본 8개 세그먼트 정의)"
+    assignee: "planner"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-004"
+
+  - id: "A-013"
+    description: "PRD-GLO-002 상세 수정: 승인 검토 체크리스트 UI 목록화, 기준선 계산 방식 정의 (인접 기간 vs 작년 동기)"
+    assignee: "prd"
+    due_date: ""
+    status: "in_progress"
+    related_doc: "PRD-GLO-002"
+
+  - id: "A-014"
+    description: "UX-GLO-002 Part 2 작성: 성과 대시보드(SCR-011) 상세 화면, 타임라인 뷰(SCR-010) 레이아웃"
+    assignee: "uiux-spec"
+    due_date: ""
+    status: "pending"
+    related_doc: "UX-GLO-002"
+
+  - id: "A-015"
+    description: "DIA-GLO-002 추가 다이어그램: 상태 머신 시각화(State Diagram), 승인 워크플로우 시퀀스(Sequence Diagram)"
+    assignee: "diagram"
+    due_date: ""
+    status: "in_progress"
+    related_doc: "DIA-GLO-002"
+
+  - id: "A-016"
+    description: "라이브 이벤트 성과 대시보드 성과 지표 정의 확정 (참여율 계산 공식, 매출 영향 산정 방식, 기준선 비교 로직)"
+    assignee: "planner"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-004"
+
+  - id: "A-017"
+    description: "긴급 제어(Pause/Kill/Extend) 시 필요한 권한 레벨 정의 및 감사 로그 스키마 설계"
+    assignee: "prd"
+    due_date: ""
+    status: "pending"
+    related_doc: "PRD-GLO-002"
+
+  - id: "A-018"
+    description: "SDK 이벤트 응답 캐싱 정책 수립 (캐시 TTL 1분, 상태 변경 반영 지연 최소화)"
+    assignee: "backend"
+    due_date: ""
+    status: "pending"
+    related_doc: "DIA-GLO-002"
+
+  - id: "A-019"
+    description: "A/B 테스트 PRD 작성 (PRD-GLO-003)"
+    assignee: "prd"
+    due_date: ""
+    status: "completed"
+    related_doc: "PRD-GLO-003"
+
+  - id: "A-020"
+    description: "A/B 테스트 UX 화면 정의서 작성 (UX-GLO-003)"
+    assignee: "uiux-spec"
+    due_date: ""
+    status: "completed"
+    related_doc: "UX-GLO-003"
+
+  - id: "A-021"
+    description: "A/B 테스트 다이어그램 작성 (DIA-GLO-003)"
+    assignee: "diagram"
+    due_date: ""
+    status: "completed"
+    related_doc: "DIA-GLO-003"
+
+  - id: "A-022"
+    description: "A/B 테스트 교차 검증 리뷰 (REV-GLO-002)"
+    assignee: "reviewer"
+    due_date: ""
+    status: "completed"
+    related_doc: "REV-GLO-002"
+
+  - id: "A-023"
+    description: "MVP 사이드바 레이아웃 전환 (GNB → Sidebar + Header + AppShell)"
+    assignee: "senior-frontend-developer"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-006"
+
+  - id: "A-024"
+    description: "플레이어 세그멘테이션 CRUD 구현 (목록/상세/생성 3개 페이지 + 5개 API)"
+    assignee: "senior-frontend-developer"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-006"
+
+  - id: "A-025"
+    description: "라이브 이벤트 CRUD 전면 재구축 (PRD-GLO-002 정합성)"
+    assignee: "senior-frontend-developer"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-006"
+
+  - id: "A-026"
+    description: "라이브 이벤트 캘린더/타임라인 뷰 구현 (F-014)"
+    assignee: "senior-frontend-developer"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-006"
+
+  - id: "A-027"
+    description: "A/B 테스트 CRUD 전면 재구축 (PRD-GLO-003 정합성)"
+    assignee: "senior-frontend-developer"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-006"
+
+  - id: "A-028"
+    description: "세그멘테이션 CRUD 전면 재구축 (PRD-GLO-001 정합성)"
+    assignee: "senior-frontend-developer"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-006"
+
+  - id: "A-029"
+    description: "RBAC 4역할 모델 구현 (Editor 역할 추가)"
+    assignee: "senior-frontend-developer"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-006"
+
+  - id: "A-030"
+    description: "KPI 대시보드 7개 지표 카드 교체 및 차트 가시성 개선"
+    assignee: "senior-frontend-developer"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-006"
+
+  - id: "A-031"
+    description: "전체 목록 페이지 페이지네이션 추가 (10건/페이지)"
+    assignee: "senior-frontend-developer"
+    due_date: ""
+    status: "pending"
+    related_doc: "MTG-GLO-006"
+
+  - id: "A-035"
+    description: "푸시 알림 PRD 작성 (PRD-GLO-007)"
+    assignee: "prd"
+    due_date: "2026-03-27"
+    status: "completed"
+    related_doc: "PRD-GLO-007"
+
+  - id: "A-036"
+    description: "푸시 알림 UX 화면 정의서 작성 (UX-GLO-007)"
+    assignee: "uiux-spec"
+    due_date: "2026-03-27"
+    status: "completed"
+    related_doc: "UX-GLO-007"
+
+  - id: "A-037"
+    description: "푸시 알림 다이어그램 작성 (DIA-GLO-007)"
+    assignee: "diagram"
+    due_date: "2026-03-27"
+    status: "completed"
+    related_doc: "DIA-GLO-007"
+
+  - id: "A-038"
+    description: "푸시 알림 교차 검증 리뷰 (REV-GLO-005)"
+    assignee: "reviewer"
+    due_date: "2026-03-27"
+    status: "completed"
+    related_doc: "REV-GLO-005"
+
+  - id: "A-039"
+    description: "REV-GLO-005 Major 이슈 3건 수정 (CampaignStatus/Priority 불일치 해소)"
+    assignee: "prd"
+    due_date: ""
+    status: "pending"
+    related_doc: "REV-GLO-005"
+
+# ============================================
+# 미결 사항
+# ============================================
+open_issues:
+  - id: "Q-001"
+    question: "라이브옵스 서비스의 핵심 타겟 사용자(게임사 규모, 장르 등)를 어떻게 설정할 것인가?"
+    raised_date: "2026-03-05"
+    status: "open"  # open | resolved
+    resolution: ""
+
+  - id: "Q-002"
+    question: "MVP 기능 범위를 어디까지 잡을 것인가? (원격설정 + 이벤트 + A/B 테스트 외 추가 기능?)"
+    raised_date: "2026-03-05"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-003"
+    question: "자체 서비스로 구축할 것인가, SaaS로 제공할 것인가?"
+    raised_date: "2026-03-05"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-004"
+    question: "Phase 1 MVP에 A/B 테스트를 포함할 것인가, Phase 2로 미룰 것인가?"
+    raised_date: "2026-03-09"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-005"
+    question: "게임 경제 시스템의 MVP 포함 여부"
+    raised_date: "2026-03-09"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-006"
+    question: "이벤트 택소노미의 범위를 어떻게 설정할 것인가? (핵심 행동만 vs 상세 행동 포함)"
+    raised_date: "2026-03-10"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-007"
+    question: "MVP(Phase 1) 출시 시 폼 빌더 UI만 제공할 것인가, 또는 쿼리 모드도 함께 제공할 것인가?"
+    raised_date: "2026-03-10"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-008"
+    question: "10분 주기 갱신으로 인한 지연이 수용 가능한 수준인가? (실시간 개입 필요 여부)"
+    raised_date: "2026-03-10"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-009"
+    question: "외부 BI 시스템(Managed Audience)과의 연동을 Phase 1에 포함할 것인가, Phase 2 이후로 미룰 것인가?"
+    raised_date: "2026-03-10"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-010"
+    question: "성과 대시보드의 기준선 계산 방식을 어떻게 할 것인가? (인접 기간 평균 vs 작년 동기 vs 커스텀)"
+    raised_date: "2026-03-23"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-011"
+    question: "다단계 페이즈(핸드아웃 / 메인 / 후속) 구현 시점을 Phase 2(예정) vs Phase 3+ 중 어디로 할 것인가?"
+    raised_date: "2026-03-23"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-012"
+    question: "이벤트 생성/편집 시 Draft 상태에서 몇 번까지 편집 가능할 것인가? (무제한 vs 최대 N회 vs 시간 제한)"
+    raised_date: "2026-03-23"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-013"
+    question: "Sticky Membership 스냅샷 저장소의 확장성: 큰 오디언스(예: 100만+ 멤버)의 경우 성능 영향은?"
+    raised_date: "2026-03-23"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-014"
+    question: "이벤트 오디언스가 삭제되는 경우 처리 방식은? (이벤트 자동 비활성화 vs 경고만 vs 전체 플레이어 대상 전환)"
+    raised_date: "2026-03-23"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-015"
+    question: "웹훅(Webhook) 및 알림(Notification) 기능을 MVP에 포함할 것인가, Phase 2 UX 확장으로 미룰 것인가?"
+    raised_date: "2026-03-23"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-016"
+    question: "원격 설정(Remote Config) 시스템 자체의 기획 시점은 언제인가? A/B 테스트가 원격 설정 확장형인데 원격 설정 PRD가 아직 없음"
+    raised_date: "2026-03-24"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-017"
+    question: "Feature Flag 시스템과 A/B 테스트의 통합/분리 범위는? 변형에 Feature Flag 포함 가능하나 Feature Flag 자체 관리 시스템은 미기획"
+    raised_date: "2026-03-24"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-018"
+    question: "캘린더/타임라인 뷰의 성능 최적화"
+    raised_date: "2026-03-26"
+    status: "open"
+    resolution: "대량 이벤트(1000+) 렌더링 성능 테스트, 가상 스크롤 적용 여부 검토 필요"
+
+  - id: "Q-019"
+    question: "A/B 테스트 분석 페이지의 통계 계산 백엔드"
+    raised_date: "2026-03-26"
+    status: "open"
+    resolution: "실시간 p-value, CI, Bonferroni 보정 계산 필요, 성능 요구사항 정의 필요"
+
+  - id: "Q-020"
+    question: "Computed Property 자동 계산 규칙의 스케일링"
+    raised_date: "2026-03-26"
+    status: "open"
+    resolution: "매일 100만+ 플레이어의 세그멘테이션 재계산 필요, 배치 처리 vs 실시간 검토"
+
+  - id: "Q-021"
+    question: "stickyMembership 스냅샷 저장소의 장기 보관 정책"
+    raised_date: "2026-03-26"
+    status: "open"
+    resolution: "30일 후 자동 삭제, 감시 로그 보관 기간, 복구 가능성 검토 필요"
+
+  - id: "Q-027"
+    question: "대량 발송(100만+ 토큰) 시 배치 처리 전략 — 큐 기반 vs 직접 호출?"
+    raised_date: "2026-03-27"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-028"
+    question: "푸시 토큰 만료/무효화 감지 및 정리 주기는?"
+    raised_date: "2026-03-27"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-029"
+    question: "인앱 메시징과 푸시 알림의 통합 캠페인 지원 시점은?"
+    raised_date: "2026-03-27"
+    status: "open"
+    resolution: ""
+
+  - id: "Q-030"
+    question: "지역/국가별 푸시 발송 규제(GDPR 등) 반영 범위는?"
+    raised_date: "2026-03-27"
+    status: "open"
+    resolution: ""
+
+# ============================================
+# 워크플로우 이력
+# ============================================
+workflow_history:
+  - date: "2026-03-05"
+    workflow: "research-to-spec"
+    step: "Phase 1: 킥오프"
+    status: "completed"
+    notes: "프로젝트 초기화 및 킥오프 세션 완료"
+
+  - date: "2026-03-05"
+    workflow: "research-to-spec"
+    step: "Phase 1: 시장조사"
+    status: "completed"
+    notes: "14개 Game LiveOps 서비스 분석 완료 (RES-GLO-001)"
+
+  - date: "2026-03-09"
+    workflow: "research-to-spec"
+    step: "Phase 1: 경쟁사 심층 분석"
+    status: "completed"
+    notes: "7개 플랫폼 공식 문서 기반 기능 분석 (RES-GLO-002), 8개 핵심 기능 카테고리 도출"
+
+  - date: "2026-03-10"
+    workflow: "research-to-spec"
+    step: "Phase 2: 플레이어 세그멘테이션 기획"
+    status: "completed"
+    notes: "Satori 심층 분석 (RES-GLO-003), 세그멘테이션 아키텍처 확정 (MTG-GLO-003)"
+
+  - date: "2026-03-10"
+    workflow: "research-to-spec"
+    step: "Phase 2: 세그멘테이션 문서화"
+    status: "completed"
+    notes: "PRD (PRD-GLO-001), UX 화면정의서 (UX-GLO-001), 다이어그램 (DIA-GLO-001) 병렬 작성 완료"
+
+  - date: "2026-03-23"
+    workflow: "research-to-spec"
+    step: "Phase 2: 라이브 이벤트 기획 및 문서화"
+    status: "completed"
+    notes: "라이브 이벤트 기획 회의 완료 (MTG-GLO-004), PRD (PRD-GLO-002), UX 화면정의서 (UX-GLO-002), 다이어그램 (DIA-GLO-002) 작성 완료. F-009~F-016, SCR-006~SCR-012, DIA-010~DIA-014, D-011~D-018, A-013~A-018, Q-010~Q-015"
+
+  - date: "2026-03-24"
+    workflow: "research-to-spec"
+    step: "Phase 2: A/B 테스트(실험) 기획 및 문서화"
+    status: "completed"
+    notes: "A/B 테스트 기획 회의 완료 (MTG-GLO-005), PRD (PRD-GLO-003), UX 화면정의서 (UX-GLO-003), 다이어그램 (DIA-GLO-003), 리뷰 리포트 (REV-GLO-002) 작성 완료. F-017~F-023, SCR-013~SCR-017, DIA-015~DIA-019, D-019~D-023, A-019~A-022, Q-016~Q-017"
+
+  - date: "2026-03-26"
+    workflow: "implementation"
+    step: "Phase 3: KPI 대시보드 + RBAC + MVP 셸 구축 + 전면 재구축"
+    status: "in_progress"
+    notes: "KPI 대시보드 기획·구현 완료(37/37 테스트 통과), RBAC 설계·구현 완료, MVP 셸 구축 완료, 라이브 이벤트/A/B/세그멘테이션 전면 재구축, 문서 리뷰·수정, UI/UX 개선. 6개 신규 문서 생성(PRD/UX/DIA 각 2개), 7개 신규 결정사항(D-026~D-032), 9개 신규 액션아이템(A-023~A-031), 4개 신규 미결사항(Q-018~Q-021). 기술 스택: Next.js 16, React 19, TypeScript. 구현 산출: 15+ 페이지, 22+ API, 5 feature 모듈"
+
+  - date: "2026-03-27"
+    workflow: "research-to-spec"
+    step: "Phase 2: 모바일 푸시 알림 발송 기획 및 문서화"
+    status: "in_progress"
+    notes: "푸시 알림 기획 세션 완료 (SES-GLO-008), PRD (PRD-GLO-007), UX 화면정의서 (UX-GLO-007), 다이어그램 (DIA-GLO-007), 리뷰 리포트 (REV-GLO-005) 작성 완료. F-037~F-043, SCR-028~SCR-032, DIA-029~DIA-033, D-036~D-040, A-035~A-039, Q-027~Q-030. 리뷰 결과: Conditional (Major 3건 수정 필요)"
+
+# ============================================
+# 태그
+# ============================================
+tags:
+  - "project:game-liveops"
+  - "domain:gaming"
+  - "status:active"
+  - "phase:implementation"
